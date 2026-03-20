@@ -3,7 +3,7 @@ import logo from "@/assets/logo.webp";
 import { ColorModeButton } from "./color-mode";
 const NavBar = () => {
   return (
-    <HStack justifyContent={"space-between"}>
+    <HStack justifyContent={"space-between"} padding="15px">
       <Image src={logo} boxSize="60px" />
       <ColorModeButton />
     </HStack>
