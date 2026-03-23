@@ -6,4 +6,5 @@ const apiClient = axios.create({
     key: "a1e9c9fe026343f99345a05f80b0093e",
   },
 });
+
 export default apiClient;
