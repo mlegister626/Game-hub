@@ -1,16 +1,15 @@
-import Game from "@/hooks/useGames";
-import { Badge } from "@chakra-ui/react/Badge";
-import { BiBorderRadius } from "react-icons/bi";
+import { Badge } from "@chakra-ui/react/badge";
 interface Props {
   score: number;
 }
 const CriticScore = ({ score }: Props) => {
+  let colorConfiguration = score > 75 ? "green" : score > 60 ? "yellow" : "red";
   return (
     <Badge
-      fontSize="14px"
+      fontSize="12px"
       paddingX="8px"
       borderRadius="4px"
-      colorScheme={score > 75 ? "green" : score > 60 ? "yellow" : "red"}
+      colorPalette={colorConfiguration}
     >
       {score}
     </Badge>
