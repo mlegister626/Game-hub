@@ -27,7 +27,6 @@ const useGames = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-    console.log("IsLoading should appear");
     apiClient
       .get<FetchGamesResponse>("/games", { signal: controller.signal })
       .then((response) => {
