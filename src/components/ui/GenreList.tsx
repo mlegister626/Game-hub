@@ -1,10 +1,15 @@
 import useGenres from "@/hooks/useGenres";
 import getCroppedImageURL from "@/services/Image-url";
-import { List, HStack, Text, Image } from "@chakra-ui/react";
+import { List, HStack, Text, Image, Spinner } from "@chakra-ui/react";
 import { PiAddressBook } from "react-icons/pi";
 
 const GenreList = () => {
-  const { data } = useGenres();
+  const { data, isLoading, error } = useGenres();
+
+  if (error) return null;
+
+  if (isLoading) return <Spinner size="xl" />;
+
   return (
     <List.Root>
       {data.map((genre) => (
