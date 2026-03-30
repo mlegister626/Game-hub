@@ -28,7 +28,10 @@ const App = () => {
         display={{ base: "none", lg: "block" }}
         paddingX="5px"
       >
-        <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+        <GenreList
+          selectedGenre={selectedGenre}
+          onSelectGenre={(genre) => setSelectedGenre(genre)}
+        />
       </GridItem>
       <GridItem area={"main"} bg="">
         <GameGrid selectedGenre={selectedGenre} />
