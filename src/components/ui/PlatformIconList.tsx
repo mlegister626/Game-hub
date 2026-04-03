@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
 import { BsGlobe, BsNintendoSwitch } from "react-icons/bs";
-import Platform from "@/hooks/useGames";
+import type { Platform } from "@/hooks/useGames";
 import { Icon, HStack } from "@chakra-ui/react";
 import type { IconType } from "react-icons";
 interface Props {
