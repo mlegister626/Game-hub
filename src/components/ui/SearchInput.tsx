@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Flex, HStack, Input, InputGroup } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
+import "@/index.css";
 
-const SearchInput = () => {
+interface Props {
+  onSearch: (query: string) => void;
+}
+
+const SearchInput = ({ onSearch }: Props) => {
+  const inputRef = useRef<HTMLInputElement>(null);
   return (
-    <InputGroup startAddon=<BsSearch />>
-      <Input
-        borderRadius={20}
-        placeholder="Search Games..."
-        variant="filled"
-        _hover={{ bg: "white" }}
-      />
-    </InputGroup>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        if (inputRef.current) onSearch(inputRef.current.value);
+      }}
+    >
+      <InputGroup startAddon={<BsSearch />}>
+        <Input
+          ref={inputRef}
+          borderRadius={20}
+          placeholder="Search Games..."
+          variant="filled"
+        />
+      </InputGroup>
+    </form>
   );
 };
 
