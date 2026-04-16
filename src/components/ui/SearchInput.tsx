@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { Flex, HStack, Input, InputGroup } from "@chakra-ui/react";
+import { useRef } from "react";
+import { Input, InputGroup } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 import "@/index.css";
 
@@ -21,7 +21,7 @@ const SearchInput = ({ onSearch }: Props) => {
           ref={inputRef}
           borderRadius={20}
           placeholder="Search Games..."
-          variant="filled"
+          variant="flushed"
         />
       </InputGroup>
     </form>

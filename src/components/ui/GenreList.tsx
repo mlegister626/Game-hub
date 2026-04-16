@@ -3,11 +3,9 @@ import getCroppedImageURL from "@/services/Image-url";
 import {
   List,
   HStack,
-  Text,
   Image,
   Spinner,
   Button,
-  Group,
   Heading,
 } from "@chakra-ui/react";
 
@@ -21,7 +19,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
 
   if (error) return null;
 
-  if (isLoading) return <Spinner size="xl" />;
+  if (isLoading) return <Spinner size={"xl"} />;
 
   return (
     <>
@@ -31,7 +29,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
       <List.Root>
         {data.map((genre) => (
           <List.Item key={genre.id}>
-            <HStack align="start" spacing={3}>
+            <HStack align="start">
               <Image
                 boxSize={"32px"}
                 borderRadius={8}

@@ -5,7 +5,7 @@ const GameCardSkeleton = () => {
     <Card.Root>
       <Skeleton width="100%" height="200px" />
       <Card.Body>
-        <SkeletonText mt="4" noOfLines={2} spacing="4" />
+        <SkeletonText mt="4" noOfLines={2} />
       </Card.Body>
     </Card.Root>
   );

@@ -1,4 +1,3 @@
-import React from "react";
 import { Menu, Portal, Button } from "@chakra-ui/react";
 
 interface Props {

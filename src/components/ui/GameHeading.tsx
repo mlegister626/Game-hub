@@ -1,4 +1,3 @@
-import React from "react";
 import { Heading, Box } from "@chakra-ui/react";
 import type { GameQuery } from "@/App";
 
