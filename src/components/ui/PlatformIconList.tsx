@@ -11,8 +11,9 @@ import { BsGlobe, BsNintendoSwitch } from "react-icons/bs";
 import type { Platform } from "@/hooks/useGames";
 import { Icon, HStack } from "@chakra-ui/react";
 import type { IconType } from "react-icons";
+
 interface Props {
-  platforms: Platform[];
+  platforms: { platform: Platform }[];
 }
 const PlatformIconList = ({ platforms }: Props) => {
   const iconMap: { [key: string]: IconType } = {
