@@ -1,4 +1,4 @@
-import { Grid, GridItem, Stack, HStack } from "@chakra-ui/react";
+import { Grid, GridItem, Stack, HStack, Box } from "@chakra-ui/react";
 import NavBar from "@/components/ui/NavBar";
 import GameGrid from "./components/ui/GameGrid";
 import GenreList from "./components/ui/GenreList";
@@ -28,7 +28,7 @@ const App = () => {
       }}
       templateColumns={{
         base: "1fr",
-        lg: "200px 1fr",
+        lg: "240px 1fr",
       }}
     >
       <GridItem area={"nav"}>
