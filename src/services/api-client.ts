@@ -1,9 +1,18 @@
 import axios from "axios";
 
+// Read from .env (local) or Vercel's Environment Variables (deployed).
+const apiKey = import.meta.env.VITE_RAWG_API_KEY;
+
+if (!apiKey) {
+  console.error(
+    "VITE_RAWG_API_KEY is missing. Add it to a .env file in the project root and restart the dev server.",
+  );
+}
+
 const apiClient = axios.create({
-  baseURL: "https://rawg.io/api",
+  baseURL: "https://api.rawg.io/api",
   params: {
-    key: "a1e9c9fe026343f99345a05f80b0093e",
+    key: apiKey,
   },
 });
 
